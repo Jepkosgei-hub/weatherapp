@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7-Day Weather Forecast - Kenya</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+    }
+
+    nav {
+      background-color: #007BFF;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    marquee {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007BFF;
+      margin: 1rem 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 1rem;
+      color: #007BFF;
+    }
+
+    .forecast-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .city-forecast {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 1rem;
+      padding: 1rem;
+      width: 300px;
+    }
+
+    .day {
+      border-bottom: 1px solid #eee;
+      padding: 0.5rem 0;
+    }
+
+    .day:last-child {
+      border-bottom: none;
+    }
+
+    .day strong {
+      display: inline-block;
+      width: 100px;
+    }
+
+    .condition {
+      font-style: italic;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="forecast.html">Forecast</a>
+    <a href="map.html">Map</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <marquee>Weekly Weather Forecast for Major Cities in Kenya</marquee>
+
+  <h2>7-Day Forecast</h2>
+
+  <div class="forecast-container">
+
+    <!-- Nairobi -->
+    <div class="city-forecast">
+      <h3>Nairobi</h3>
+      <div class="day"><strong>Monday:</strong> 25°C - <span class="condition">Partly Cloudy</span></div>
+      <div class="day"><strong>Tuesday:</strong> 24°C - <span class="condition">Rainy</span></div>
+      <div class="day"><strong>Wednesday:</strong> 26°C - <span class="condition">Sunny</span></div>
+      <div class="day"><strong>Thursday:</strong> 23°C - <span class="condition">Cloudy</span></div>
+      <div class="day"><strong>Friday:</strong> 25°C - <span class="condition">Thunderstorms</span></div>
+      <div class="day"><strong>Saturday:</strong> 27°C - <span class="condition">Clear</span></div>
+      <div class="day"><strong>Sunday:</strong> 28°C - <span class="condition">Sunny</span></div>
+    </div>
+
+    <!-- Mombasa -->
+    <div class="city-forecast">
+      <h3>Mombasa</h3>
+      <div class="day"><strong>Monday:</strong> 30°C - <span class="condition">Sunny</span></div>
+      <div class="day"><strong>Tuesday:</strong> 31°C - <span class="condition">Clear</span></div>
+      <div class="day"><strong>Wednesday:</strong> 32°C - <span class="condition">Partly Cloudy</span></div>
+      <div class="day"><strong>Thursday:</strong> 29°C - <span class="condition">Rain Showers</span></div>
+      <div class="day"><strong>Friday:</strong> 28°C - <span class="condition">Thunderstorms</span></div>
+      <div class="day"><strong>Saturday:</strong> 30°C - <span class="condition">Clear</span></div>
+      <div class="day"><strong>Sunday:</strong> 31°C - <span class="condition">Sunny</span></div>
+    </div>
+
+    <!-- Nakuru -->
+    <div class="city-forecast">
+      <h3>Nakuru</h3>
+      <div class="day"><strong>Monday:</strong> 22°C - <span class="condition">Cloudy</span></div>
+      <div class="day"><strong>Tuesday:</strong> 23°C - <span class="condition">Rainy</span></div>
+      <div class="day"><strong>Wednesday:</strong> 24°C - <span class="condition">Clear</span></div>
+      <div class="day"><strong>Thursday:</strong> 25°C - <span class="condition">Sunny</span></div>
+      <div class="day"><strong>Friday:</strong> 26°C - <span class="condition">Partly Cloudy</span></div>
+      <div class="day"><strong>Saturday:</strong> 27°C - <span class="condition">Thunderstorms</span></div>
+      <div class="day"><strong>Sunday:</strong> 24°C - <span class="condition">Rainy</span></div>
+    </div>
+
+    <!-- Eldoret -->
+    <div class="city-forecast">
+      <h3>Eldoret</h3>
+      <div class="day"><strong>Monday:</strong> 20°C - <span class="condition">Rain Showers</span></div>
+      <div class="day"><strong>Tuesday:</strong> 21°C - <span class="condition">Cloudy</span></div>
+      <div class="day"><strong>Wednesday:</strong> 22°C - <span class="condition">Sunny</span></div>
+      <div class="day"><strong>Thursday:</strong> 21°C - <span class="condition">Clear</span></div>
+      <div class="day"><strong>Friday:</strong> 20°C - <span class="condition">Rainy</span></div>
+      <div class="day"><strong>Saturday:</strong> 23°C - <span class="condition">Partly Cloudy</span></div>
+      <div class="day"><strong>Sunday:</strong> 24°C - <span class="condition">Sunny</span></div>
+    </div>
+
+    <!-- Kisumu -->
+    <div class="city-forecast">
+      <h3>Kisumu</h3>
+      <div class="day"><strong>Monday:</strong> 27°C - <span class="condition">Sunny</span></div>
+      <div class="day"><strong>Tuesday:</strong> 26°C - <span class="condition">Rain Showers</span></div>
+      <div class="day"><strong>Wednesday:</strong> 28°C - <span class="condition">Clear</span></div>
+      <div class="day"><strong>Thursday:</strong> 29°C - <span class="condition">Cloudy</span></div>
+      <div class="day"><strong>Friday:</strong> 30°C - <span class="condition">Sunny</span></div>
+      <div class="day"><strong>Saturday:</strong> 31°C - <span class="condition">Partly Cloudy</span></div>
+      <div class="day"><strong>Sunday:</strong> 32°C - <span class="condition">Thunderstorms</span></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

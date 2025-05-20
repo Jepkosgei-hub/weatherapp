@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Map - Kenya</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    nav {
+      background-color: #007BFF;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    marquee {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007BFF;
+      margin: 1rem;
+      display: block;
+      text-align: center;
+    }
+
+    #map {
+      height: 90vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="forecast.html">Forecast</a>
+    <a href="map.html">Map</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <marquee>Interactive Weather Map - View Weather Across Kenyan Cities</marquee>
+
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+    // Initialize the map centered on Kenya
+    const map = L.map('map').setView([-0.0236, 37.9062], 6);
+
+    // Add OpenStreetMap base layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add OpenWeatherMap weather tile layer
+    const apiKey = 'YOUR_API_KEY';
+    L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
+      attribution: '&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>',
+      opacity: 0.5
+    }).addTo(map);
+
+    // Kenyan cities with coordinates
+    const cities = [
+      { name: 'Nairobi', lat: -1.2921, lon: 36.8219 },
+      { name: 'Mombasa', lat: -4.0435, lon: 39.6682 },
+      { name: 'Nakuru', lat: -0.3031, lon: 36.0800 },
+      { name: 'Eldoret', lat: 0.5143, lon: 35.2698 },
+      { name: 'Kisumu', lat: -0.0917, lon: 34.7680 }
+    ];
+
+    // Add city markers
+    cities.forEach(city => {
+      L.marker([city.lat, city.lon])
+        .addTo(map)
+        .bindPopup(`<strong>${city.name}</strong>`)
+        .openPopup();
+    });
+  </script>
+
+</body>
+</html>
